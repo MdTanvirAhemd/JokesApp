@@ -49,8 +49,25 @@ public class MainActivity extends AppCompatActivity implements CardStack.CardEve
         try {
             JSONObject rootObject = new JSONObject(loadJSONFromAsset());
 
+            JSONArray tallJokes = rootObject.getJSONArray("tall");
+            addJokesToArrayList(tallJokes, allJokes);
             JSONArray fatJokes = rootObject.getJSONArray("fat");
             addJokesToArrayList(fatJokes, allJokes);
+            JSONArray miscJokes = rootObject.getJSONArray("misc");
+            addJokesToArrayList(miscJokes, allJokes);
+            JSONArray stupidJokes = rootObject.getJSONArray("stupid");
+            addJokesToArrayList(stupidJokes, allJokes);
+            JSONArray uglyJokes = rootObject.getJSONArray("ugly");
+            addJokesToArrayList(uglyJokes, allJokes);
+            JSONArray nastyJokes = rootObject.getJSONArray("nasty");
+            addJokesToArrayList(nastyJokes, allJokes);
+            JSONArray hairyJokes = rootObject.getJSONArray("hairy");
+            addJokesToArrayList(hairyJokes, allJokes);
+            JSONArray baldJokes = rootObject.getJSONArray("bald");
+            addJokesToArrayList(baldJokes, allJokes);
+            JSONArray oldJokes = rootObject.getJSONArray("old");
+            addJokesToArrayList(oldJokes, allJokes);
+
 
         } catch (JSONException e) {
             e.printStackTrace();
